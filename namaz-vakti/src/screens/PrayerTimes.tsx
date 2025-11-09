@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, ActivityIndicator, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Dimensions } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Location from 'expo-location';
 import moment from 'moment';
 import 'moment/locale/tr';
