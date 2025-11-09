@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, FlatList, ActivityIndicator, SafeAreaView } from 'react-native';
+import { SurahScreenRouteProp } from '../navigation/types';
 import { COLORS, SIZES } from '../constants/theme';
 
 interface Ayah {
@@ -7,7 +8,7 @@ interface Ayah {
   text: string;
 }
 
-const Surah = ({ route }) => {
+const Surah = ({ route }: { route: SurahScreenRouteProp }) => {
   const { surahNumber } = route.params;
   const [ayahs, setAyahs] = useState<Ayah[]>([]);
   const [loading, setLoading] = useState(true);
