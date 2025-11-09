@@ -103,12 +103,12 @@ const PrayerTimes = () => {
     if (errorMsg) {
       content = <Text style={styles.errorText}>{errorMsg}</Text>;
     } else {
-      content = prayerTimes.map((prayer, index) => (
+      content = <View>{prayerTimes.map((prayer, index) => (
         <View key={index} style={styles.prayerContainer}>
           <Text style={styles.prayerName}>{prayer.name}</Text>
           <Text style={styles.prayerTime}>{prayer.time}</Text>
         </View>
-      ));
+      ))}</View>;
     }
   }
 

@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { COLORS } from '../constants/theme';
+import { RootStackParamList } from './types';
 
 import PrayerTimes from '../screens/PrayerTimes';
 import Quran from '../screens/Quran';
@@ -11,7 +12,7 @@ import Qibla from '../screens/Qibla';
 import Surah from '../screens/Surah';
 
 const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const QuranStack = () => {
   return (
