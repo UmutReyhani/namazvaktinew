@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, FlatList, ActivityIndicator, TextInput, SafeAreaView, TouchableOpacity } from 'react-native';
+import { QuranScreenNavigationProp } from '../navigation/types';
 import { COLORS, SIZES } from '../constants/theme';
 
 interface Surah {
@@ -11,7 +12,7 @@ interface Surah {
   revelationType: string;
 }
 
-const Quran = ({ navigation }) => {
+const Quran = ({ navigation }: { navigation: QuranScreenNavigationProp }) => {
   const [surahs, setSurahs] = useState<Surah[]>([]);
   const [filteredSurahs, setFilteredSurahs] = useState<Surah[]>([]);
   const [loading, setLoading] = useState(true);
